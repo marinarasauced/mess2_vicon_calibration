@@ -170,7 +170,7 @@ private:
             rate.sleep();
         }
 
-        auto quat_diff = get_vicon_calibration(meas1.transform, meas2.transform);
+        auto quat_diff = get_vicon_calibration(meas2.transform, meas1.transform);
         if (rclcpp::ok()) {
             result->quat_diff = quat_diff;
             result->success = 1;
